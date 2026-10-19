@@ -2,7 +2,15 @@
 
 # Blender探索 · 暮色海港
 
-![暮色海港 v3.42 的实际网页：灯塔、山间小屋、码头与透明海水](docs/media/harbor-day.jpg)
+[![Version 3.42](docs/badges/version.svg)](package.json)
+[![Blender 5.2.2 LTS](docs/badges/blender.svg)](docs/architecture.md)
+[![Three.js r185](docs/badges/threejs.svg)](THIRD_PARTY_NOTICES.md)
+[![Runtime WebGL 2](docs/badges/webgl.svg)](docs/architecture.md)
+[![License All rights reserved](docs/badges/license.svg)](LICENSE)
+
+![暮色海港 v3.42 实际 WebGL 画面的拉近视角：完整灯塔、房屋、码头和透明水体](docs/media/harbor-day.jpg)
+
+<sub>实际网页场景，拉近镜头并隐藏操作控件拍摄。</sub>
 
 **绕着小岛走一走，点起水波，听一会儿海。**
 
@@ -85,4 +93,4 @@ asset-manifest.json  发布资产的尺寸与 SHA-256
 
 ## 许可
 
-本项目原创代码、场景编排和自制服装暂未授予开源许可；参见 [LICENSE](LICENSE)。第三方素材保留各自许可：Three.js、Draco、Quaternius 人物底模、Poly Haven 材质和 Freesound 环境录音的来源与说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。仓库私有状态与素材许可是两回事。
+本仓库已公开，原创代码、场景编排和自制服装暂未授予开源许可；参见 [LICENSE](LICENSE)。第三方素材保留各自许可：Three.js、Draco、Quaternius 人物底模、Poly Haven 材质和 Freesound 环境录音的来源与说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。公开可见不等同于 MIT 等开源授权。
