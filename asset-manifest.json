@@ -3,8 +3,8 @@
   "files": [
     {
       "path": "docs/media/harbor-day.jpg",
-      "bytes": 415608,
-      "sha256": "d62711486c4df95cd47c23f11ced4b51a87699cf35a9062d39c5cacc09467bc1"
+      "bytes": 240117,
+      "sha256": "b727761bb05cc97ec936b4750a344adcae0d218f38e2b273a67c208fca2170e8"
     },
     {
       "path": "experiments/harbor-cast-20261018/fisher-v3.blend",
