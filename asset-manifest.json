@@ -1,0 +1,175 @@
+{
+  "version": "3.42.0",
+  "files": [
+    {
+      "path": "docs/media/harbor-day.jpg",
+      "bytes": 116818,
+      "sha256": "3cd46640d1331277091e80cf4b20f91891c6cdc61a8ed3d9385fac1bb16c4322"
+    },
+    {
+      "path": "experiments/harbor-cast-20261018/fisher-v3.blend",
+      "bytes": 44521902,
+      "sha256": "62c77aa9c8777b3b7a4dd4ab3e97f737ae7e93ab3bc46f446e4ec14622feb9ac"
+    },
+    {
+      "path": "experiments/harbor-cast-20261018/visitor.blend",
+      "bytes": 22211198,
+      "sha256": "fd3b0644779ffd38141e75a749be374d78775000ceb4e478d3b996cfa73de891"
+    },
+    {
+      "path": "experiments/keeper-a-20261017/keeper-a-neckfix.blend",
+      "bytes": 19515796,
+      "sha256": "49e76e3aa868dc623ae26b73dca5652607ef6e55cc2ceed6910479495c0847e7"
+    },
+    {
+      "path": "scenes/moonlit-harbor-animation-v331-water-contacts.blend",
+      "bytes": 39265347,
+      "sha256": "69f4f11a079825cf5dfd233457580b962f16e7bdd610f367069a7ebf1649581f"
+    },
+    {
+      "path": "scenes/pilot-launch-v336.blend",
+      "bytes": 156751,
+      "sha256": "6d8f6ecb4ab296fa717c93350b7e9f3fa73035be410d80322d6a284b0efc0008"
+    },
+    {
+      "path": "web/暮色海港3d/assets/audio/cafe.mp3",
+      "bytes": 3161564,
+      "sha256": "4e31cd9068a77b9046da019763111c7642ea04a0c332133ce9f8bc2ee24ac3dd"
+    },
+    {
+      "path": "web/暮色海港3d/assets/audio/gulls.mp3",
+      "bytes": 392463,
+      "sha256": "6b8ed3dd0b7bc7892b02af1800b82a86b5b46ca34c8803b0b363d9c11aa04b6a"
+    },
+    {
+      "path": "web/暮色海港3d/assets/audio/waves.mp3",
+      "bytes": 1325208,
+      "sha256": "f7bc0f5c0f6b810df066e41be3659deefa9899598616b930d4d9ee265424f7c5"
+    },
+    {
+      "path": "web/暮色海港3d/assets/audio/wind.mp3",
+      "bytes": 221433,
+      "sha256": "4667388a7e4d0e080904fb072130495da659ed397466e74d6c52950e34c9730e"
+    },
+    {
+      "path": "web/暮色海港3d/assets/cast-v340/fisher.glb",
+      "bytes": 987948,
+      "sha256": "41a7b28b4d48dd47dbffa67b4ec193d75b200564749e57ad5fe68ee94d444ee1"
+    },
+    {
+      "path": "web/暮色海港3d/assets/cast-v340/keeper.glb",
+      "bytes": 812988,
+      "sha256": "8fd2f9a998cc29301feb0125252912c4126bdc0eeac376858492931f21c431a9"
+    },
+    {
+      "path": "web/暮色海港3d/assets/cast-v340/visitor.glb",
+      "bytes": 788216,
+      "sha256": "e644994bd5f209bed4e5cd148cba0ca50f32511e09b84b3cdf888fedecc238c9"
+    },
+    {
+      "path": "web/暮色海港3d/assets/moonlit-harbor-v340-textures.glb",
+      "bytes": 25122096,
+      "sha256": "2116c8196dfe102798a2e27db25bcf9ae172e5332c88e4935ad86f4bee30054c"
+    },
+    {
+      "path": "web/暮色海港3d/assets/pilot-launch-v336.glb",
+      "bytes": 536220,
+      "sha256": "22953a60e746bece3f08a3aab58c1a28c4186fee8802512bfb6e2b810f6d7665"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/0452ffb2e1072e918e1f51b6.webp",
+      "bytes": 152176,
+      "sha256": "0452ffb2e1072e918e1f51b63186b3c410ecb3a6c13d50b2814d177eb886e1c2"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/06efc9d44128053dc20d8b3d.webp",
+      "bytes": 200196,
+      "sha256": "06efc9d44128053dc20d8b3d0e9c426f0da16cb08ba4e8252c2d657cf4ef7d00"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/0f0d0437301ef2f234186caa.webp",
+      "bytes": 31304,
+      "sha256": "0f0d0437301ef2f234186caa723ef235ab46ca3935319af788bac503ee58b3ce"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/1ec6415588813675d356fb41.webp",
+      "bytes": 87528,
+      "sha256": "1ec6415588813675d356fb41f929c9ac81018732a4782cc5c77a5fb33a6d9ed0"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/28cb7876f7bb5972e1de50d9.webp",
+      "bytes": 310166,
+      "sha256": "28cb7876f7bb5972e1de50d996fc33b8c5a7366c71364cf011f667d09841ecb5"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/2a954fa26a3628354cd7b70a.webp",
+      "bytes": 3070,
+      "sha256": "2a954fa26a3628354cd7b70a1598b5a589599bda4a6ddbdd555d5a128bd526d7"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/37b730f45d03428d5133a8cc.webp",
+      "bytes": 143386,
+      "sha256": "37b730f45d03428d5133a8ccf54b8d9b65d89fa783b18ecfd78fdeb2c963a632"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/41d5cca1aabf730fcffd6134.webp",
+      "bytes": 119908,
+      "sha256": "41d5cca1aabf730fcffd6134aa02d71c91e121b0670f00a2b78a2603f1147226"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/41fb8ea8301dd8aabdcd3815.webp",
+      "bytes": 89558,
+      "sha256": "41fb8ea8301dd8aabdcd3815c0bbb2bdcd71b6c13f6d5b0e0e1c76c23b4ac57a"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/4dab424f8d35f190cf8c27ae.webp",
+      "bytes": 528,
+      "sha256": "4dab424f8d35f190cf8c27ae9f4f837d2315a442c72fc9565d79ef5b3c4b510f"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/84bb61e9afa18427008c444f.webp",
+      "bytes": 416016,
+      "sha256": "84bb61e9afa18427008c444feb9e5edf732e32b77c6e3ffb16161829e53ec8df"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/9b4f6c4dbdbd821b4249412b.webp",
+      "bytes": 32040,
+      "sha256": "9b4f6c4dbdbd821b4249412bc8b570f9538d1f83dc937a061655d2280931d544"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/ae26714f7cc4c8e84c72123e.webp",
+      "bytes": 190422,
+      "sha256": "ae26714f7cc4c8e84c72123e6d0acc263458ff8b41c9babb33dcfc140bc7893d"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/b942b763d161fa225057c026.webp",
+      "bytes": 83510,
+      "sha256": "b942b763d161fa225057c0266edaeab0de552711c3b3b03a996978969ca0fe3d"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/d4a73ef051c69444c710a9c2.webp",
+      "bytes": 226014,
+      "sha256": "d4a73ef051c69444c710a9c2aadebe18074ab48ccf91e8f673386c7f579c2bcf"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/db8d66dc7eb696f65cb64154.webp",
+      "bytes": 54,
+      "sha256": "db8d66dc7eb696f65cb641543264e6f4c8b5467533db31fa5bd7a0275d6ee39b"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/e3b22a7757691ea60d5bfa6f.webp",
+      "bytes": 83654,
+      "sha256": "e3b22a7757691ea60d5bfa6fd21d3f0c42e95dc1859291c2490956be8a18ad22"
+    },
+    {
+      "path": "web/暮色海港3d/assets/textures-v340/fd69d66af9560dd51de775de.webp",
+      "bytes": 176,
+      "sha256": "fd69d66af9560dd51de775de034004d6c365a345ab4d8aedd68facdc9c529c26"
+    },
+    {
+      "path": "web/暮色海港3d/vendor/three/examples/jsm/libs/draco/gltf/draco_decoder.wasm",
+      "bytes": 192420,
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac"
+    }
+  ]
+}

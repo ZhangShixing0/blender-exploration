@@ -1,0 +1,12 @@
+{
+  "name": "blender-exploration",
+  "version": "3.42.0",
+  "private": true,
+  "type": "module",
+  "description": "An interactive Blender and Three.js harbor experiment",
+  "scripts": {
+    "start": "python scripts/serve.py",
+    "check": "python scripts/verify_bundle.py"
+  },
+  "license": "UNLICENSED"
+}

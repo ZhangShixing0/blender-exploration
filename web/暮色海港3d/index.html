@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#12263d"><meta name="description" content="在一座小小的海港，听海浪、海风与远处的日常。">
+  <link rel="icon" href="data:,"><title>暮色海港 · 听一会儿海</title>
+  <link rel="stylesheet" href="./styles.css?v=harbor340">
+  <script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js"}}</script>
+</head>
+<body>
+  <script>if(new URLSearchParams(location.search).has('day'))document.body.classList.add('daylight');</script>
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="i-lighthouse" viewBox="0 0 32 44"><path d="m8 41 3-25h10l3 25ZM10 16V9h12v7M8 9l8-7 8 7M6 41h20M14 41v-9h4v9M14 21h4v5h-4M8 16h16M12 9v7m8-7v7"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 9c3-5 5 5 10 0s7 5 10 0M2 15c3-5 5 5 10 0s7 5 10 0"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8h12c5 0 4-6 1-5M3 12h16c4 0 3 6 0 5M3 16h7c4 0 3 5 0 5"/></symbol>
+    <symbol id="i-bird" viewBox="0 0 24 24"><path d="M2 7c4-1 7 1 10 5 3-4 6-6 10-5M8 16l4-4 4 4"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 8h13v7a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5ZM17 9h2a3 3 0 0 1 0 6h-2M8 3v2m5-2v2M2 22h19"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 6v12M16 6v12" stroke-width="3"/></symbol>
+    <symbol id="i-mix" viewBox="0 0 24 24"><path d="M6 3v5m0 4v9M12 3v11m0 4v3M18 3v2m0 4v12M3 10h6m0 6h6m0-9h6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 1v2m0 18v2M1 12h2m18 0h2M4 4l2 2m12 12 2 2M4 20l2-2M18 6l2-2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15A9 9 0 0 1 9 3a9 9 0 1 0 11 12Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+  </defs></svg>
+  <main class="experience" id="experience">
+    <canvas id="scene-canvas" aria-label="海港三维场景，可拖动旋转、滚轮或双指缩放"></canvas>
+    <header class="masthead">
+      <div class="brand"><svg class="brand-mark"><use href="#i-lighthouse"/></svg><div><p>A MOMENT BY THE SEA</p><h1>暮色海港</h1></div></div>
+      <div class="top-actions"><button class="day-toggle" data-control="night" aria-label="切换白天与夜晚" aria-pressed="true"><span class="day-option"><svg><use href="#i-sun"/></svg>白天</span><span class="night-option"><svg><use href="#i-moon"/></svg>夜晚</span></button><button class="icon-button reset-button" data-control="reset" aria-label="回到全景" title="回到全景"><svg><use href="#i-reset"/></svg></button></div>
+    </header>
+    <section class="scene-note" aria-label="海港时刻"><span class="short-rule"></span><p id="scene-poem">灯亮了，听一会儿海。</p><small id="scene-time">夜色 · 海风轻拂</small></section>
+    <div class="load-state" id="load-state" role="status"><div><span class="status-dot"></span><span id="status-text">正在靠近海港</span><span id="load-readout">0%</span></div><div class="load-bar"><i id="load-bar-fill"></i></div><small id="asset-state">第一次见面，需要多等一小会儿。</small></div>
+    <p id="interaction-hint">拖动环顾 · 滚轮 / 双指缩放</p>
+    <nav class="view-nav" aria-label="去海港的哪里"><button data-view="overview" class="selected" aria-pressed="true">看全景</button><button data-view="harbor" aria-pressed="false">到码头</button><button data-view="lighthouse" aria-pressed="false">望灯塔</button><button class="explore-trigger" data-panel="explore" aria-controls="explore-panel" aria-expanded="false">探索海港</button></nav>
+    <div id="guide-status" hidden><span id="guide-progress" role="status"></span><button id="stop-guide" aria-label="结束灯塔接船">结束</button></div>
+    <p id="scene-feedback" role="status" hidden></p>
+    <section id="explore-panel" class="floating-panel" aria-labelledby="explore-title" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">LITTLE MOMENTS, LITTLE DISCOVERIES</p><h2 id="explore-title">在海港玩一会儿</h2></div><button class="icon-button" data-close aria-label="关闭探索面板"><svg><use href="#i-close"/></svg></button></div>
+      <div class="explore-modes" aria-label="在海面上做什么"><button data-explore-mode="look" data-scene-action aria-pressed="true" disabled>环顾</button><button data-explore-mode="stir" data-scene-action aria-pressed="false" disabled>拨水</button><button data-explore-mode="feed" data-scene-action aria-pressed="false" disabled>投食</button></div>
+      <p class="panel-footnote">轻点水面泛起涟漪，也可以点点人物、船和灯塔。选「拨水」后，划动手指就能搅动海水。</p>
+      <div class="explore-actions">
+        <button id="try-ripple" data-scene-action disabled><strong>拨一下水</strong><small>看水波慢慢散开</small></button>
+        <button id="feed-nearby" data-scene-action disabled><strong>撒一点鱼食</strong><small>等鱼儿游过来</small></button>
+        <button id="touch-boat" data-scene-action disabled><strong>轻碰小船</strong><small>晃一晃，听声汽笛</small></button>
+        <button id="greet-keeper" data-scene-action disabled><strong>和邻居打招呼</strong><small>去灯塔，挥挥手</small></button>
+        <button id="guide-boat" data-scene-action aria-pressed="false" disabled><strong>灯塔接船</strong><small>让灯光陪小船回家</small></button>
+        <button id="rain-toggle" data-scene-action aria-pressed="false" disabled><strong>下一场小雨</strong><small>雨圈与雨声一起落下</small></button>
+        <button data-character-view="keeper" data-scene-action disabled><strong>拜访守塔人</strong><small>到灯塔旁打个招呼</small></button>
+        <button data-character-view="fisher" data-scene-action disabled><strong>看看渔夫</strong><small>点他拿起或收起钓竿</small></button>
+        <button data-character-view="visitor" data-scene-action disabled><strong>遇见旅人</strong><small>在咖啡馆前歇歇脚</small></button>
+      </div>
+
+      <button id="take-photo" class="postcard-button" data-scene-action disabled>把这一刻拍成明信片 ↗</button>
+      <p id="explore-status" class="panel-footnote" role="status">不赶时间，想玩哪一个就点哪一个。</p>
+      <button id="quiet-harbor" class="text-button" data-scene-action disabled>收起互动，安静看海</button>
+    </section>
+    <section class="sound-dock" aria-label="海港声音播放器">
+      <button id="play-sound" class="play-button" aria-label="播放环境音" aria-pressed="false"><svg><use href="#i-play"/></svg></button>
+      <button class="now-playing" data-panel="sounds" aria-controls="sounds-panel" aria-expanded="false"><span class="dock-eyebrow">听见海港</span><strong id="mix-name">码头听海</strong><span id="sound-status" role="status">点一下，让海风进来</span></button>
+      <span class="sound-meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <div class="dock-actions"><button class="dock-action" data-panel="sounds" aria-controls="sounds-panel" aria-expanded="false"><svg><use href="#i-mix"/></svg><span>声音</span></button><button class="dock-action" data-panel="timer" aria-controls="timer-panel" aria-expanded="false"><svg><use href="#i-clock"/></svg><span id="timer-label">小憩</span></button></div>
+    </section>
+    <section id="sounds-panel" class="floating-panel" aria-labelledby="sounds-title" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">SOUNDS OF THE HARBOR</p><h2 id="sounds-title">调一段自己的海风</h2></div><button class="icon-button" data-close aria-label="关闭声音面板"><svg><use href="#i-close"/></svg></button></div>
+      <div class="preset-list" aria-label="环境音组合"><button data-preset="shore" aria-pressed="true">码头听海</button><button data-preset="breeze" aria-pressed="false">海风散步</button><button data-preset="cabin" aria-pressed="false">窗边小憩</button></div>
+      <div id="track-list"></div>
+      <div class="master-row"><label for="master-volume">总音量</label><output id="master-value" for="master-volume">45%</output><input id="master-volume" type="range" min="0" max="100" value="45" aria-label="总音量"></div>
+      <div class="save-row"><button id="save-mix" class="text-button">记住这组声音</button><button id="restore-mix" class="text-button" disabled>我的收藏</button></div><p id="save-feedback" class="panel-footnote" role="status">只保存在这台设备，重新打开时保持安静。</p>
+    </section>
+    <section id="timer-panel" class="floating-panel timer-panel" aria-labelledby="timer-title" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">TAKE A LITTLE BREAK</p><h2 id="timer-title">给自己一点留白</h2></div><button class="icon-button" data-close aria-label="关闭小憩面板"><svg><use href="#i-close"/></svg></button></div>
+      <p class="panel-description">选一段时间，听海歇一会儿。<br>时间到了，声音会轻轻淡出。</p><div class="timer-options"><button data-minutes="5">5<small>分钟</small></button><button data-minutes="15">15<small>分钟</small></button><button data-minutes="25">25<small>分钟</small></button></div>
+      <p id="timer-status" role="status">不设闹铃，不打扰你。</p><button id="cancel-timer" class="text-button" hidden>取消定时，继续听海</button>
+    </section>
+    <button class="settings-trigger" data-panel="settings" aria-controls="settings-panel" aria-expanded="false"><svg><use href="#i-mix"/></svg><span>画面设置</span></button>
+    <section id="settings-panel" class="floating-panel" aria-labelledby="settings-title" hidden>
+      <div class="panel-heading"><div><p class="eyebrow">YOUR LITTLE HARBOR</p><h2 id="settings-title">舒服地看海</h2></div><button class="icon-button" data-close aria-label="关闭画面设置"><svg><use href="#i-close"/></svg></button></div>
+      <div class="setting-row"><label for="quality">画质</label><select id="quality"><option value="balanced">均衡</option><option value="high">精细</option><option value="low">省电</option></select></div>
+      <p class="setting-label">光线感觉</p><div class="lighting-options"><button data-lighting="neutral" class="active" aria-pressed="true">自然</button><button data-lighting="cinematic" aria-pressed="false">氛围</button><button data-lighting="flat" aria-pressed="false">柔和</button></div><p id="lighting-readout" class="panel-footnote">正在准备光线</p>
+      <div class="toggle-options"><button data-control="sweep" class="active" aria-pressed="true">灯塔光束</button><button data-control="water" class="active" aria-pressed="true">海水与游鱼</button></div>
+      <a class="credits-link" href="./audio-credits.html" target="_blank" rel="noopener">声音来自哪里 ↗</a>
+    </section>
+    <div id="error-state" class="error-state" role="alert" hidden><h2>海港暂时没有加载出来</h2><p>请确认本地预览服务仍在运行，再试一次。</p><button id="retry-scene">重新加载</button></div>
+  </main>
+  <dialog id="postcard-dialog" aria-labelledby="postcard-title"><div class="panel-heading"><h2 id="postcard-title">这一刻的海港</h2><button id="close-postcard" class="icon-button" aria-label="关闭明信片"><svg><use href="#i-close"/></svg></button></div><img id="postcard-image" alt="当前海港视角的明信片"><a id="download-postcard" class="postcard-button">保存明信片</a><p class="panel-footnote">留在你的设备里，不会自动发布。</p></dialog>
+  <script type="module" src="./experience.js?v=harbor334"></script><script type="module" src="./app.js?v=harbor342"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "waves",
+    "author": "Andy_Gardner",
+    "source": "https://freesound.org/people/Andy_Gardner/sounds/127802/",
+    "download": "https://cdn.freesound.org/previews/127/127802_2254206-hq.mp3",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "bytes": 1325208,
+    "sha256": "f7bc0f5c0f6b810df066e41be3659deefa9899598616b930d4d9ee265424f7c5",
+    "retrieved": "2026-10-14"
+  },
+  {
+    "id": "wind",
+    "author": "fthgurdy",
+    "source": "https://freesound.org/people/fthgurdy/sounds/528944/",
+    "download": "https://cdn.freesound.org/previews/528/528944_3302313-hq.mp3",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "bytes": 221433,
+    "sha256": "4667388a7e4d0e080904fb072130495da659ed397466e74d6c52950e34c9730e",
+    "retrieved": "2026-10-14"
+  },
+  {
+    "id": "gulls",
+    "author": "NachtmahrTV",
+    "source": "https://freesound.org/people/NachtmahrTV/sounds/553235/",
+    "download": "https://cdn.freesound.org/previews/553/553235_5620304-hq.mp3",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "bytes": 392463,
+    "sha256": "6b8ed3dd0b7bc7892b02af1800b82a86b5b46ca34c8803b0b363d9c11aa04b6a",
+    "retrieved": "2026-10-14"
+  },
+  {
+    "id": "cafe",
+    "author": "priesjensen",
+    "source": "https://freesound.org/people/priesjensen/sounds/482990/",
+    "download": "https://cdn.freesound.org/previews/482/482990_8972317-hq.mp3",
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "bytes": 3161564,
+    "sha256": "4e31cd9068a77b9046da019763111c7642ea04a0c332133ce9f8bc2ee24ac3dd",
+    "retrieved": "2026-10-14"
+  }
+]
