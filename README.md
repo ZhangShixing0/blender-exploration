@@ -2,6 +2,8 @@
 
 # Blender探索·暮色海港
 
+**[简体中文](README.md)** · [English](README.en.md)
+
 ![暮色海港 v3.42 实际 WebGL 场景：横向取景，隐藏操作控件，完整呈现灯塔、房屋、码头和透明水体](docs/media/harbor-day.jpg)
 
 **绕着小岛走一走，点起水波，听一会儿海。**
