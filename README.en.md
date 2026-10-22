@@ -8,7 +8,7 @@
 
 **Walk around the island, send ripples across the water, and listen to the sea.**
 
-[Quick start](#quick-start) · [Interactions](#what-you-can-do) · [Model projects (Chinese)](docs/architecture.md) · [Asset sources](THIRD_PARTY_NOTICES.md)
+[Quick start](#quick-start) · [First look](#first-look) · [How it works](#how-it-works) · [Model projects (Chinese)](docs/architecture.md) · [Asset sources](THIRD_PARTY_NOTICES.md)
 
 [![Version 3.42](docs/badges/version.svg)](package.json)
 [![Blender 5.2.2 LTS](docs/badges/blender.svg)](docs/architecture.md)
@@ -25,13 +25,21 @@
 
 The project turns a harbor modeled in Blender into a small world you can approach, touch, and listen to in a browser. It explores how 3D models can become lightweight interactive experiences while retaining source models for continued development.
 
-## What you can do
+## First look
 
-- **Explore the harbor**: drag to orbit, zoom from a wide view into the lighthouse, café, and pier, and switch between day and night.
-- **Touch the water**: click to create ripples and watch fish, seagulls, and boats.
-- **Visit the residents**: meet the lighthouse keeper, fisher, and traveler, each using a selected character model. Click to greet them; the fisher can pick up a fishing rod.
-- **Stay a while**: mix waves, wind, seagulls, and shop ambience, save combinations, and set a rest timer.
-- **Capture a moment**: try the lighthouse boat-arrival and light-rain interactions, or export a postcard of the current view.
+After starting the local scene, use this short path to confirm the main experience:
+
+1. In “看全景”, drag to orbit and zoom, confirming the lighthouse, houses, pier, and transparent water load.
+2. Choose “到码头” and click the water to see ripples, underwater fish, and floating-object feedback.
+3. Click a character to see the greeting or fishing-rod action; switch day and night to check the lighting and ambient color change together.
+4. Click the bottom play button, then use the sound and rest panels to mix waves, wind, seagulls, and shop ambience.
+
+## How it works
+
+![Blender scenes are packed as GLB and textures, then Three.js adds water, lighting, character, and sound interactions in the browser](docs/diagrams/harbor-pipeline.en.svg)
+
+Blender files keep editable inputs for terrain, buildings, piers, boats, and characters. The browser loads exported GLB and WebP assets, then the Three.js runtime adds dynamic water, day/night lighting, animal paths, character actions, and sound. This keeps the web experience runnable while leaving the source projects available for further work. See [model and runtime responsibilities](docs/architecture.md) (Chinese) for the file map.
+
 
 ## Quick start
 
@@ -43,11 +51,19 @@ cd blender-exploration
 python scripts/serve.py
 ```
 
-Open **http://127.0.0.1:8765/**. On Windows you can also use `py`; macOS / Linux commonly use `python3`.
+Open **[http://127.0.0.1:8765/](http://127.0.0.1:8765/)**. On Windows you can also use `py`; macOS / Linux commonly use `python3`.
 
 If another preview occupies the port, run `python scripts/serve.py --port 8766` and open that port instead. Do not open the HTML file directly: models and modules must load over HTTP.
 
 The first visit loads about 30 MB of scene, character, and shared texture assets; loading time depends on the device. Sound starts off. Click the play button at the bottom to load and play audio. Sound preferences stay in the local browser and are not uploaded.
+
+## What you can do
+
+- **Explore the harbor**: drag to orbit, zoom from a wide view into the lighthouse, café, and pier, and switch between day and night.
+- **Touch the water**: click to create ripples and watch fish, seagulls, and boats.
+- **Visit the residents**: meet the lighthouse keeper, fisher, and traveler, each using a selected character model. Click to greet them; the fisher can pick up a fishing rod.
+- **Stay a while**: mix waves, wind, seagulls, and shop ambience, save combinations, and set a rest timer.
+- **Capture a moment**: try the lighthouse boat-arrival and light-rain interactions, or export a postcard of the current view.
 
 ## Current version
 
