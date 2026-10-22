@@ -1,0 +1,50 @@
+{
+  "style": "flat-square-v1",
+  "badges": [
+    {
+      "file": "version.svg",
+      "label": "Version",
+      "value": "3.42",
+      "category": "version",
+      "evidence": "../../package.json",
+      "label_width": 49,
+      "value_width": 37
+    },
+    {
+      "file": "blender.svg",
+      "label": "Blender",
+      "value": "5.2.2 LTS",
+      "category": "platform",
+      "evidence": "../architecture.md",
+      "label_width": 55,
+      "value_width": 72
+    },
+    {
+      "file": "threejs.svg",
+      "label": "Three.js",
+      "value": "r185",
+      "category": "technology",
+      "evidence": "../../THIRD_PARTY_NOTICES.md",
+      "label_width": 58,
+      "value_width": 39
+    },
+    {
+      "file": "webgl.svg",
+      "label": "Runtime",
+      "value": "WebGL 2",
+      "category": "runtime",
+      "evidence": "../../README.md",
+      "label_width": 57,
+      "value_width": 65
+    },
+    {
+      "file": "license.svg",
+      "label": "License",
+      "value": "All rights reserved",
+      "category": "license",
+      "evidence": "../../LICENSE",
+      "label_width": 53,
+      "value_width": 124
+    }
+  ]
+}
