@@ -51,7 +51,7 @@ cd blender-exploration
 python scripts/serve.py
 ```
 
-Open **http://127.0.0.1:8765/**. On Windows you can also use `py`; macOS / Linux commonly use `python3`.
+Open **[http://127.0.0.1:8765/](http://127.0.0.1:8765/)**. On Windows you can also use `py`; macOS / Linux commonly use `python3`.
 
 If another preview occupies the port, run `python scripts/serve.py --port 8766` and open that port instead. Do not open the HTML file directly: models and modules must load over HTTP.
 

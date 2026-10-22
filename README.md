@@ -51,7 +51,7 @@ cd blender-exploration
 python scripts/serve.py
 ```
 
-打开 **http://127.0.0.1:8765/**。Windows 也可用 `py`，macOS / Linux 通常使用 `python3`。
+打开 **[http://127.0.0.1:8765/](http://127.0.0.1:8765/)**。Windows 也可用 `py`，macOS / Linux 通常使用 `python3`。
 
 端口被其他预览占用时，运行 `python scripts/serve.py --port 8766`，打开对应端口。不要直接双击 HTML；模型与模块需要通过 HTTP 加载。
 
