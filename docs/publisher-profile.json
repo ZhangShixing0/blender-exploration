@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "mode": "showcase",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "badge_style": "flat-square-v1",
+  "hero": "existing",
+  "diagram": "svg",
+  "section_order": [
+    "problem",
+    "demonstration",
+    "capabilities",
+    "workflow",
+    "quick_start",
+    "limitations",
+    "security"
+  ],
+  "readme": {
+    "default": "README.md",
+    "english": "README.en.md"
+  }
+}
